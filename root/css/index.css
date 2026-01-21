@@ -1,0 +1,280 @@
+@font-face {
+  font-family: 'Alt-Reveira';
+  src: url('font/ALTRiviera-Light-BF6527666de5ad2.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+    font-family: 'Queens';
+    src: url('font/Queen\ Semi\ Bold.otf');
+}
+*{
+    background-color: black ;
+    font-family: "Alt-Reveira", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+video{
+    width: fit-content;
+    height: 50vh;
+    position: absolute;
+    top: 30%;
+    left: 23%;
+    object-fit: fill;
+    z-index: -1;
+    display: block;
+}
+.parent_grid{
+    display: flexbox;
+    flex-direction:column ;
+    gap: 10px;
+}
+
+.nav{
+    width:100%;
+    background-color: rgb(235, 176, 74);
+}
+.nav .name1{
+    float:left;
+    color: black;
+    background: none;
+    padding-left: 20px;
+    padding-top: 10px;
+    font-size: large;
+}
+.navbar {
+    background-image: none;
+    z-index: 0;
+ padding: 2px;
+
+  margin: auto;
+  width: max-content;
+  height: 50px;
+  background-color: black;
+}
+#text2{
+    color:white;
+position: fixed;
+justify-content: center;
+margin: auto;
+font-size: 1em;
+margin-top: 10px;
+text-align: center;
+width: 100%;
+bottom:0px;
+
+}
+#text1{
+    font-family: "Queens", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+top:1em;
+color:white;
+position: fixed;
+justify-content: center;
+margin: auto;
+font-size: 5em;
+margin-top: 10px;
+text-align: center;
+width: 100%;
+}
+a{
+    z-index: 0;
+    float: left;
+    text-align: center;
+    display: block;
+    color: rgb(255, 255, 255);
+    margin-left: 2em;
+    margin-right: 2em;
+    font-size: 30px;
+    text-decoration: none;
+    background:none;
+    padding-top: 4px;
+
+}
+a:hover{
+    opacity: 50%;
+}
+.navbar a.icon{
+
+    display: none;
+}
+@media screen and (max-width:600px) {
+    .navbar a:not(:first-child){display: none;}
+    .navbar a.icon{
+        z-index: 0;
+    float: center;
+    display: block;
+    }
+    .navbar{
+        background-color:  rgb(255, 180, 51);;
+    }
+    .navbar a.icon .fa{
+        background-color: rgb(255, 180, 51);;
+    }
+    p{
+        font-size: 30px;
+    }
+    #text1{
+        float:center;
+    }
+    video{
+        top:50%;
+    }
+}
+
+@media screen and (max-width:600px){
+    .navbarresponsive {
+        background-color:  rgb(255, 180, 51);;
+        z-index: 0;
+padding: 2px;
+  margin: auto;
+  width: max-content;
+  height: max-content;
+    }
+    .navbarresponsive{position: relative;}
+    .navbarresponsive a.icon{
+    align-content: center;
+    background-color: none;
+    z-index: 0;
+    }
+    .navbarresponsive a{
+        display: block;
+        text-align:center;
+        float: none;
+        z-index: 0;
+        padding-bottom: 4px ;
+        background-color:  rgb(255, 180, 51);;
+    }
+    .navbarresponsive a.icon .fa{
+        background-color:  rgb(255, 180, 51);
+    }
+}
+.nav .name2{
+    float:right;
+    color: black;
+    background: none;
+    padding-left: 20px;
+    padding-top: 10px;
+    font-size: large;
+    z-index: 1000;
+}
+
+/*projects page css*/
+
+.carousel{
+    margin: auto;
+    width:100%;
+    display: flex;
+    overflow-x: auto;
+    align-items: center;
+}
+.slides{
+    width: 80%;
+    top: 30%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    gap: 5em;
+}
+.carousel::-webkit-scrollbar{
+    display: none;
+}
+
+.project img{
+    height:30em;
+    margin: auto;
+    z-index: 1;
+}
+.prev 
+.next{
+    display: flex;
+    position: absolute;
+    top:50%;
+    padding: 10px 0 10px 0;
+    z-index: 1000;
+}
+.prev
+.next:hover{
+    cursor:pointer;
+    opacity: 50%;
+}
+.prev{
+    float:left;
+}
+.next{
+    
+    float:right;
+}
+.anim {
+  animation:spin 1s linear ;
+  width: 80%;
+    top: 30%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    gap: 5em;
+    animation-fill-mode: forwards;
+}
+.animback{
+   animation:spinback 1s linear ;
+  width: 80%;
+    top: 30%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    gap: 5em;
+    animation-fill-mode: forwards; 
+}
+@keyframes spin {
+    to{translate: -30%;}
+}
+@keyframes spinback {
+    from{translate: -30%;}
+    to{translate:0%}
+}
+/*Contacts css*/
+.glass-card {
+    backdrop-filter: blur(10px) saturate(71%);
+    -webkit-backdrop-filter: blur(10px) saturate(71%);
+    background-color: rgba(255, 255, 255, 0.21);
+    background-image:none;
+    border-radius: 12px;
+    border: 1px solid rgba(209, 213, 219, 0.3);
+    width: 30em;
+    height:30em;
+    margin: 30px  35em auto;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+.detail{
+    font-size: x-large;
+    text-decoration: underline;
+    padding-bottom: 4px;
+    text-align: left;  
+    background: none; 
+}
+.content{
+    background:none;
+    color: black;
+}
+.name{
+    padding-bottom:5px;
+    margin: auto 80px;
+    border:2px rgba(255, 255, 255, 0.242);
+    border-style: solid;
+    background:none;
+    color:black;
+    padding-top: 7px;
+}
+.detail a{
+    color: black;
+    background:none;
+}
+.no{
+    background:none;
+    text-align:left;
+}
